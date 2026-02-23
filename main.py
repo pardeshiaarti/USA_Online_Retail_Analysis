@@ -1,6 +1,11 @@
 import streamlit as st
-import USA_Online_Store_Transaction_Analysis
+from USA_Online_Store_Transaction_Analysis import run_analysis
 
-st.title("USA Online Retail Analysis")
+st.set_page_config(page_title="USA Online Retail Analysis", layout="wide")
 
-st.write("Analysis executed successfully.")
+st.title("📊 USA Online Retail Analysis Dashboard")
+
+st.markdown("Click below to run the analysis.")
+
+if st.button("Run Analysis"):
+    run_analysis()
